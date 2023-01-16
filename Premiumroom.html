@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PREMIUM ROOM</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="hotel.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+            <header>
+              <!--Navbar-->
+              <nav class="navbar navbar-expand-sm bg-custom navbar-dark fixed-top" style="background-color:rgb(28, 28, 199);">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="image/logo" alt="" width="65" height="50" class="logo">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="reservation.php">BookNow</a>
+                  </li>
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Rooms&Suites
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="Deluxeroom.html">DELUXE ROOM</a></li>
+                      <li><a class="dropdown-item" href="Premiumroom.html">PREMIUM ROOM</a></li>
+                      <li><a class="dropdown-item" href="Familysuite.html">FAMILY SUITE</a>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            </nav>
+            </header>
+    </head>
+    <body>
+        <image src="image/premiumroom.webp"width=100% height="500px">
+           <h2>Our all Standard Room has connected services with</h2>
+           <ul> Accommodate up to 2 Adults with 1 Child.</ul>
+            <ul>Balcony View</ul>
+           <ul>Full marble bathroom with shower.</ul>
+            <ul>Luxurious bathroom amenities.</ul>
+            <ul>Daily housekeeping and evening turndown service.</ul>
+            <ul>Complimentary wireless internet access.</ul>
+            <ul>Individually controlled air-conditioning.</ul>
+            <ul>42-inch flat-screen TV.</ul>
+            <ul>Coffee and tea making facilities.</ul>
+            <ul>Safe deposit box.</ul>
+            <div class="container mt-3">
+  
+          
+              <button type="button" class="btn btn-primary" id="toastbtn">view price</button>
+              
+              <div class="toast">
+                <div class="toast-header">
+                  <strong class="me-auto">Rs.5000 per night</strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                </div>
+                <div class="toast-body">
+                  <button name="BOOK NOW" ><a href="reservation.php">BOOK NOW</a></button>
+                </div>
+              </div>
+            </div>
+            
+            <script>
+            document.getElementById("toastbtn").onclick = function() {
+              var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+              var toastList = toastElList.map(function(toastEl) {
+                return new bootstrap.Toast(toastEl)
+              })
+              toastList.forEach(toast => toast.show()) 
+            }
+            </script>
+            <footer style="background-color:rgb(28, 28, 199);"class="text-left text-white" id="footer">	
+              <h4 style=" text-align: center;  font-weight: bold; ">Connect with Us:</h4>
+                <div class="container">
+                      <h6 style="text-align:center">Location:Butwal</h6>
+                     <h6 style="text-align:center">Phone Numbers:982345665</h6>
+                       <h6 style="text-align:center">Email:Sunshinehotel@gmail.com</h6>
+
+                       </div>  
+                <div>
+                  <center>
+                    <p style="font-size:12px">&copy;2021 Hotel Sunshine</p>
+                  <br>
+                  </div> 
+          </footer>
+          </body>
+          <script type="text/javascript" src="js/bootstrap.min.js"></script>
+          <script type="text/javascript" src="js/popper.min.js"></script>
+</html>
+    

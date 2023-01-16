@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="Utf-8">
+        <title>Contact Us</title>
+        <script type="text/javascript">
+            function validateEmail(inputText)
+    {
+       var mailformat= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+       if(inputText.match(mailformat))
+        {
+            alert("valid email address!");
+                return true;
+        }
+         else
+            {
+                alert ("Please enter valid email address");
+                return false;
+               }
+     }
+     function validdateform()
+            {
+                var fullname= document.getElementById('fullname').value;
+                var email =document.getElementById('email').value;
+                if(fullname ==null || email=='')
+                {
+                    document.getElementById("errormessage").innerHTML='Please enter your email';
+                    return false;
+                }
+                if(fullname =='' || email== NULL)
+                {
+                    document.getElementById("errormessage").innerHTML='Please enter your name';
+                    return false;
+                }
+            }
+    </script>
+    <style>
+        #errormessage
+        {
+            color:red;
+        }
+    </style>
+    </head>
+    <body>
+        <h2>Send us message to assist you with your inquiry: </h2>
+        <h6 style="color: red; font-size: xx-small;font-family: serif;">*required</h6>
+        <p id="errormessage"></p>
+       <form name="contactinfo" method="POST" action="contactinfo.php" 
+       onsubmit="return validdateform()">
+      <label>FULL NAME*:</label><br>
+        <input type="text" name="fullname" id="fullname"><br>
+        <label>Email*:</label><br>
+        <input type="email" name="email" id="email"><br>
+        <label>Message:</label><br>
+        <textarea cols="30" rows="6" size="500" name="tell-us">
+        </textarea>
+        <br>
+        <input type="submit" value="submit">
+        </form>
+        <h3>OR you can subscribe to our newsletter to get latest info about our
+            exclusive offers 
+        </h3>
+        <form name="form1" action="#">
+            <input type="text" name="emailid" id="email" value="">
+            <input type="submit" name="submit" value="subscribe" onclick="return validateEmail(form1.email.value);">
+        </form>
+    </body>
+</html>
